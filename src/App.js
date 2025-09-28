@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Header from './Header';
 
 function App() {
-  const [user, setUser] = useState('Felipe Lamas');
+  const [user, setUser] = useState();
   useEffect(() => {
 
   }, []);
