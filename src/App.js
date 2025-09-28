@@ -1,16 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-import {db} from './firebase.js';
-import { useEffect } from 'react';
+import { db } from './firebase.js';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [user, setUser] = useState(null);
   useEffect(() => {
-    // this is where the code runs
-    console.log(db);
+
   }, []);
   return (
     <div className="App">
-      <h1>Let's build Instagram Clone</h1>
+      <header className="header">
+        <div className="center">
+          <div className="header__logo">
+            <a href="/" className="app__headerImage">
+              <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="logo" />
+            </a>
+          </div>
+          <div className="header__loginForm">
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button type="submit">Log In</button>
+          </div>
+        </div>
+      </header>
     </div>
   );
 }
